@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Name</title>
+</head>
+
+<body>
+    <form name="form1">
+        <label>First Name:</label>
+        <input type="text" name="fname"><br><br>
+        <label>Second Name:</label>
+        <input type="text" name="sname"><br><br>
+        <label>Third Name:</label>
+        <input type="text" name="tname"><br><br>
+        <br>
+        <input type="button" value="Long Name" onclick="lname()">
+        <input type="reset">
+    </form>
+    <script>
+        function lname() {
+            var a = document.form1.fname.value;
+            var b = document.form1.sname.value;
+            var c = document.form1.tname.value;
+            var alen = a.length;
+            var blen = b.length;
+            var clen = c.length;
+            if (alen >= blen && alen >= clen)
+                alert(a + " is longest");
+            else if (blen >= alen && blen >= clen)
+                alert(b + " is longest");
+            else
+                alert(c + " is longest");
+        }
+    </script>
+</body>
+
+</html>

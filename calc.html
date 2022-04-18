@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend>Simple Calculator</legend>
+            First No. : <input type="number" id="n1"><br>
+            Second No. : <input type="number" id="n2"><br>
+            <input type="button" value="+" onclick="sum()">
+            <input type="button" value="-" onclick="sub()">
+            <input type="button" value="*" onclick="prod()">
+            <input type="button" value="/" onclick="div()">
+            <script>
+                function sum() {
+                    var a = parseInt(document.getElementById("n1").value);
+                    var b = parseInt(document.getElementById("n2").value);
+                    var sum = a + b;
+                    document.getElementById("out").innerHTML = "The sum is " + sum;
+                }
+                function sub() {
+
+                    var a = parseInt(document.getElementById("n1").value);
+                    var b = parseInt(document.getElementById("n2").value);
+                    var sub = a - b;
+                    document.getElementById("out").innerHTML = "The difference is " + sub;
+                }
+                function prod() {
+
+                    var a = parseInt(document.getElementById("n1").value);
+                    var b = parseInt(document.getElementById("n2").value);
+                    var prod = a * b;
+                    document.getElementById("out").innerHTML = "The sum is " + prod;
+                }
+                function div() {
+
+                    var a = parseInt(document.getElementById("n1").value);
+                    var b = parseInt(document.getElementById("n2").value);
+                    var div = a / b;
+                    document.getElementById("out").innerHTML = "The sum is " + div;
+                }
+            </script>
+            <h2 id="out"></h2>
+    </form>
+    </fieldset>
+
+</body>
+
+</html>

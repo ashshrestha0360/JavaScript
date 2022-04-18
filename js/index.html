@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Pattern</title>
+</head>
+
+<body>
+    <form name="id">
+        Enter name:<input type="text" name="a"><br>
+        <input type="button" value="change pattern" onclick="pattern()">
+    </form>
+    <script>
+        function pattern() {
+            var x = document.id.a.value;
+            var i, j;
+            for (i = 0; i < x.length; i++) {
+                for (j = 0; j <= i; j++) {
+                    document.write(x.charAt(j));
+
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

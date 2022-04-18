@@ -1,0 +1,53 @@
+<!-- Create a simple Program to build the Calculator in JavaScript using with HTML and CSS web languages. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> JavaScript Calculator </title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+    <h1> Calculator </h1>
+    <div class="calc_border">
+        <form name="myform">
+
+
+            <input id="calc" type="text" name="display"> <br> <br>
+
+            <input type="button" value="1" onclick="one()" class="btns">
+            <input type="button" value="2" onclick="two()" class="btns">
+            <input type="button" value="3" onclick="three()" class="btns">
+            <input type="button" value="+" onclick="plus()" class="btns">
+            <br> <br>
+
+            <input type="button" value="4" onclick="four()" class="btns">
+            <input type="button" value="5" onclick="five()" class="btns">
+            <input type="button" value="6" onclick="six()" class="btns">
+            <input type="button" value="-" onclick="minus()" class="btns">
+            <br> <br>
+
+            <input type="button" value="7" onclick="seven()" class="btns">
+            <input type="button" value="8" onclick="eight()" class="btns">
+            <input type="button" value="9" onclick="nine()" class="btns">
+            <input type="button" value="*" onclick="multiply()" class="btns">
+            <br> <br>
+
+
+            <input type="button" value="/" onclick="divide()" class="btns">
+            <input type="button" value="0" onclick="zero()" class="btns">
+            <input type="button" value="." onclick="dot()" class="btns">
+
+            <input type="button" value="=" onclick="equals()" class="btns">
+            <br>
+
+            <input type="button" value="AC" onclick="clearall()" id="clear" class="btns">
+            <br>
+
+        </form>
+    </div>
+</body>
+
+</html>

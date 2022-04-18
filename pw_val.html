@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+    <style>
+        body {
+
+            text-align: center;
+            /* background-color: lightblue; */
+            background-image: url("black.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-size: larger;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .btns {
+            padding: 8px;
+            border: 1px dotted green;
+            border-radius: 3px;
+        }
+
+        #pwbox {
+            border-radius: 3px;
+            border: 2px solid white;
+        }
+
+        #btn1:hover {
+            background-color: lightgreen;
+        }
+
+        form {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 7px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cform">
+        <fieldset>
+            <legend>Form</legend>
+            <form action="" name="myform">
+                Password: <input type="password" name="pw"
+                    title="most contain 1 special character, 1 number, 1 small alphabet,1 captial alphabet, 8 length "
+                    id="pwbox"><br><br>
+                <input type="submit" value="Check" onclick="check()" class="btns">
+                <input type="reset" class="btns">
+            </form>
+        </fieldset>
+
+
+    </div>
+
+    <script>
+        function check() {
+
+            var x = document.myform.pw.value;
+            var l = x.length, count = 0, schar = 0, cap = 0, scap = 0;
+
+            for (var i = 0; i < l; i++) {
+                var y = x.charAt(i);
+                if (y >= 0 && y <= 9) {
+                    count++;
+                }
+                else if (y >= 'A' && y <= 'Z') {
+                    cap++;
+                }
+                else if (y >= 'a' && y <= 'z') {
+                    scap++;
+                }
+                else {
+                    schar++;
+                }
+            }
+
+            // if (l < 8) {
+            //     alert("Invalid Password");
+            // }
+            // else if (count == 0) {
+            //     alert("Invalid Password");
+            // }
+            // else if (cap == 0) {
+            //     alert("Invalid Password");
+            // }
+            // else if (scap == 0) {
+            //     alert("Invalid Password");
+            // }
+            // else if (schar == 0) {
+            //     alert("Invalid Password");
+            // }
+            // else {
+            //     alert("Password submitted");
+            // }
+            if (l < 8 || count == 0 || cap == 0 || scap == 0 || schar == 0) {
+                alert("Invalid Password");
+            }
+            else {
+                alert("Password submitted");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

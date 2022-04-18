@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+            background-color: burlywood;
+            /* background-image: url("E:\\Works\\Web Development\\Portfolio\\images\\g7.jpg");
+            background-size: cover;
+            background-repeat: no-repeat; */
+        }
+        legend{
+            font-family: cursive;
+            text-transform: uppercase;
+        }
+        form{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend>Factorial Calculator</legend>
+            Enter the number : <input type="number" id="num"><br>
+            <input type="button" value="Factorial" onclick="fact()">
+            <script>
+                function fact() {
+                    var a = parseInt(document.getElementById("num").value);
+                    var i, fact = 1;
+                    for (i = 1; i <= a; i++) {
+                        fact *= i;
+                    }
+                    document.getElementById("out").innerHTML = "The factorial is " + fact;
+                }
+            </script>
+            <h2 id="out"></h2>
+    </form>
+    </fieldset>
+
+</body>
+
+</html>
